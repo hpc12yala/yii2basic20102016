@@ -61,21 +61,20 @@ class ComStatusController extends Controller {
     public function actionCreate() {
         $model = new ComStatus();
         // print_r($model);
-      /*  if (Yii::$app->request->post()) {
-            echo $model->com_status_name;
+        /*  if (Yii::$app->request->post()) {
+          echo $model->com_status_name;
+          } else {
+          return $this->render('create', [
+          'model' => $model,
+          ]);
+          }
+         */ if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['view', 'id' => $model->com_status_id]);
         } else {
             return $this->render('create', [
                         'model' => $model,
             ]);
         }
-
-        */  if ($model->load(Yii::$app->request->post()) && $model->save()) {
-          return $this->redirect(['view', 'id' => $model->com_status_id]);
-          } else {
-          return $this->render('create', [
-          'model' => $model,
-          ]);
-          } 
     }
 
     /**

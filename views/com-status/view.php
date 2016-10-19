@@ -16,21 +16,25 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p>
         <?= Html::a('แก้ไข', ['update', 'id' => $model->com_status_id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('ลบ', ['delete', 'id' => $model->com_status_id], [
+        <?=
+        Html::a('ลบ', ['delete', 'id' => $model->com_status_id], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',
                 'method' => 'post',
             ],
-        ]) ?>
+        ])
+        ?>
     </p>
 
-    <?= DetailView::widget([
+    <?=
+    DetailView::widget([
         'model' => $model,
         'attributes' => [
             'com_status_id',
             'com_status_name',
         ],
-    ]) ?>
+    ])
+    ?>
 
 </div>

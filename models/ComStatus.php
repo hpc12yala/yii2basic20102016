@@ -10,34 +10,32 @@ use Yii;
  * @property integer $com_status_id
  * @property string $com_status_name
  */
-class ComStatus extends \yii\db\ActiveRecord
-{
+class ComStatus extends \yii\db\ActiveRecord {
+
     /**
      * @inheritdoc
      */
-    public static function tableName()
-    {
+    public static function tableName() {
         return 'com_status';
     }
 
     /**
      * @inheritdoc
      */
-    public function rules()
-    {
+    public function rules() {
         return [
-            [['com_status_name'], 'string', 'max' => 255],
+                [['com_status_name'], 'string', 'max' => 255],
         ];
     }
 
     /**
      * @inheritdoc
      */
-    public function attributeLabels()
-    {
+    public function attributeLabels() {
         return [
             'com_status_id' => 'รหัส',
             'com_status_name' => 'รายการสถานะ',
         ];
     }
+
 }
