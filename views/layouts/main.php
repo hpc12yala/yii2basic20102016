@@ -28,6 +28,16 @@ AppAsset::register($this);
                 <img src="<?= Yii::getAlias('@web') ?>/img/header.png" class="img-responsive" alt="header" >
             </div>
             <?php
+            $report = [
+                    ['label' => '<span class="glyphicon glyphicon-home"></span> รายงาน1', 'url' => ['/first/index']],
+                    ['label' => '<span class="glyphicon glyphicon-flag"></span> รายงาน2', 'url' => ['/site/about']]
+            ];
+            $setting = [
+                    ['label' => '<span class="glyphicon glyphicon-home"></span> สถานะคอมฯ', 'url' => ['/com-status']],
+                    ['label' => '<span class="glyphicon glyphicon-cog"></span> รายงาน2', 'url' => ['/site/about']]
+            ];
+
+
             NavBar::begin([
                 'brandLabel' => '<span class="glyphicon glyphicon-fire"></span> HPC 12 Yala',
                 'brandUrl' => Yii::$app->homeUrl,
@@ -41,6 +51,8 @@ AppAsset::register($this);
                 'items' => [
                         ['label' => '<span class="glyphicon glyphicon-home"></span> หน้าแรก', 'url' => ['/site/index']],
                         ['label' => '<span class="glyphicon glyphicon-flag"></span> เกี่ยวกับเรา', 'url' => ['/site/about']],
+                        ['label' => '<span class="glyphicon glyphicon-flag"></span> รายงาน', 'items' => $report],
+                        ['label' => '<span class="glyphicon glyphicon-cog"></span> ตั้งค่า', 'items' => $setting],
                         ['label' => 'ติดต่อ', 'url' => ['/site/contact']],
                     Yii::$app->user->isGuest ? (
                                 ['label' => 'เข้าสู่ระบบ', 'url' => ['/site/login']]
