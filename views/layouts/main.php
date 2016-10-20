@@ -34,7 +34,7 @@ AppAsset::register($this);
             ];
             $setting = [
                     ['label' => '<span class="glyphicon glyphicon-home"></span> สถานะคอมฯ', 'url' => ['/com-status']],
-                    ['label' => '<span class="glyphicon glyphicon-cog"></span> รายงาน2', 'url' => ['/site/about']]
+                    ['label' => '<span class="glyphicon glyphicon-cog"></span> งบประมาณ', 'url' => ['/budget']]
             ];
 
 
