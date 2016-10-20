@@ -32,8 +32,13 @@ AppAsset::register($this);
                     ['label' => '<span class="glyphicon glyphicon-home"></span> รายงาน1', 'url' => ['/first/index']],
                     ['label' => '<span class="glyphicon glyphicon-flag"></span> รายงาน2', 'url' => ['/site/about']]
             ];
+            $regiter = [
+                ['label' => '<span class="glyphicon glyphicon-home"></span> รายงานคอมฯ', 'url' => ['/reportcomdetail']],    
+                ['label' => '<span class="glyphicon glyphicon-home"></span> สถานะคอมฯ', 'url' => ['/com-status']],
+                    ['label' => '<span class="glyphicon glyphicon-home"></span> ชนิดคอมฯ', 'url' => ['/com-type']],
+            ];
             $setting = [
-                    ['label' => '<span class="glyphicon glyphicon-home"></span> สถานะคอมฯ', 'url' => ['/com-status']],
+                    ['label' => '<span class="glyphicon glyphicon-flag"></span> คอมฯ', 'items' => $regiter],
                     ['label' => '<span class="glyphicon glyphicon-cog"></span> งบประมาณ', 'url' => ['/budget']]
             ];
 
