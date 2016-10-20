@@ -5,10 +5,10 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Budget */
 
-$this->title = 'Update Budget: ' . $model->budget_id;
-$this->params['breadcrumbs'][] = ['label' => 'Budgets', 'url' => ['index']];
+$this->title = 'แก้ไขงบประมาณ: ' . $model->budget_id;
+$this->params['breadcrumbs'][] = ['label' => 'งบประมาณ', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->budget_id, 'url' => ['view', 'id' => $model->budget_id]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->params['breadcrumbs'][] = 'แก้ไข';
 ?>
 <div class="budget-update">
 
